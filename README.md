@@ -1,3 +1,8 @@
-第五次组会第三版.py是判据原理的代码，与recognised_gesture.py和calculate_angle.py需要在同目录之下
+第五次组会第三版.py是判据原理的代码，运行时需要与recognised_gesture.py和calculate_angle.py需要在同目录之下
 收集训练数据.py可以用于收集手势图片，放到文件夹.image里等着去进行模型训练
-模型训练.py会使用模型进行手势识别，需要用到同目录下.model文件夹里面的.h5文件
+利用.image里的图片训练出的某模型就放在model文件夹里面了
+模型训练.py会使用模型进行手势识别，需要用到同目录下.model文件夹里面的.h5文件，需要二者在同一目录下
+UI.py是自动化控制bilibili打开，关闭，搜索，点赞，暂停播放的脚本
+
+
+以上是本组中期项目汇报版本，未完待续
