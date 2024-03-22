@@ -1,1 +1,3 @@
 第五次组会第三版.py是判据原理的代码，与recognised_gesture.py和calculate_angle.py需要在同目录之下
+收集训练数据.py可以用于收集手势图片，放到文件夹.image里等着去进行模型训练
+模型训练.py会使用模型进行手势识别，需要用到同目录下.model文件夹里面的.h5文件
