@@ -1,0 +1,51 @@
+"""
+pip (逐步替代easy-install(一些老包下载可能还得用它))
+
+pip 是一个安装包管理器，联网访问pypi网站并从上面搜索和下载最新版的包文件，解压包文件并读取配置信息自动完成配置
+
+    问题1：慢
+        默认国外源，距离远，流量限制
+        # Python官方——https://pypi.python.org/simple/
+    对策：
+        pip支持显式输入网址作为下载源
+        
+        常见国内镜像源如下
+        # 阿里云——http://mirrors.aliyun.com/pypi/simple/
+        # 中国科技大学——https://pypi.mirrors.ustc.edu.cn/simple/
+        # 豆瓣————http://pypi.douban.com/simple     ！！！！（不知道哪个活爹跟国内做了个假的，不好分辨，别用）！！！！
+        # v2ex——http://pypi.v2ex.com/simple/
+        # 中国科学院——http://pypi.mirrors.opencas.cn/simple/
+        # 清华大学——https://pypi.tuna.tsinghua.edu.cn/simple/
+        
+        输入格式（在终端里或者在cmd里输入，不是代码！）pip install -i https://pypi.tuna.tsinghua.edu.cn/simple requests
+        
+        或者
+        pip install requests -i https://pypi.tuna.tsinghua.edu.cn/simple
+        -i表示临时换源使用
+        
+        永久换源
+        pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+        pip config set install.trusted-host mirrors.aliyun.com
+    
+pip 是python自带的，版本更新很快.
+        
+        问题2：如何看pip是否被安装，装到了哪里，版本怎样？
+        cmd里pip -V
+        
+        如何升级pip版本？
+        pip install --upgrade pip
+        
+        我们常用的pip命令：install,uninstall(跟着y/n),config（命令行里输入pip),list(演示)， freeze(pip freeze 路径   pip install -r 文件路径)
+        
+ 
+  1、pip 会把包下在本python版本文件夹中，这会导致若一个电脑下载了其他版本python,或者是在虚拟环境中创建的项目中且在使用其他版本python时无法使用
+    一定确保自己在import是用的版本是我们pip时的那个版本
+    
+  2、pip install的真正实现原理：使用的是Script文件夹中的exe
+    那么，没装环境变量的就会报错
+    解决方法：加环境变量
+    
+    python -m pip install xxxxx
+  注意pycharm的版本陷阱，建议配置vscode以保证python 和pip的最新版本
+
+"""

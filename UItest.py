@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from auto_control_copy import *
 
 
 def print_one():
@@ -7,6 +8,7 @@ def print_one():
     label2['text'] = "使用ing(ﾉ´ヮ`)ﾉ*:"
     label2['foreground'] = 'green'
     start_button['state'] = 'disabled'
+    main()
 
 def print_five():
     print(f"退出按钮的状态为：{start_button['state']}")
@@ -17,9 +19,13 @@ def print_five():
         label2['text'] = "再见喽(^o^)"       # 这个地方用不着放global权限符
         label2['foreground'] = 'red'
         start_button['state'] = 'normal'
+        out()
+        
+        
 
 root = tk.Tk()
 root.title("手势识别优化：提升短视频浏览体验的智能交互技术")
+img_pic = tk.PhotoImage(file = 'pic3.png')
 
 
 root.configure(bg='#D3D3D3')
@@ -33,10 +39,10 @@ frame.pack(fill=tk.BOTH, expand=True)
 label_text1 = '''                 手势识别优化：
 提升短视频浏览体验的智能交互系统'''
 label_text2 = "欢迎(≧▽≦)/！"
-label1 = ttk.Label(frame, text=label_text1, font=("Times New Roman", 24, "bold"), background='#D3D3D3', foreground='#333333')
-label1.place(x = 150,y = 50)  
-label2 = ttk.Label(frame, text=label_text2,font=("Times New Roman", 15, "bold"), background='#D3D3D3', foreground='#333333')
-label2.place(x = 320,y = 180)
+label1 = ttk.Label(frame, text=label_text1, font=("Times New Roman", 20, "bold"), background='#D3D3D3', foreground='#333333')
+label1.place(x = 150,y = 25)  
+label2 = ttk.Label(frame, text=label_text2,font=("Times New Roman", 15, "bold"), background='#D3D3D3', foreground='#333333',image = img_pic)
+label2.place(x = 200,y = 120)
 
 button_font = ("Helvetica", 18, "bold")
 
